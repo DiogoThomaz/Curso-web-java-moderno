@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Exercícios HTML 22</title>
+</head>
+<body>
+    <header class="titulo">
+        <h1>Exercícios HTML</h1> 
+    </header>
+    <nav class="navegacao" >
+        <a href="exercicios/teste.html">00 - Teste</a> |
+        <a href="exercicios/temp.html">01 - Temp</a>
+        <a href="exercicios/desafio1.html">02 - Desafio</a>
+    </nav>
+    <section id="conteudo"></section>
+    <footer class="rodape">
+        Curso Web Moderno 
+    </footer>
+    <script>
+        //seleciona a tag a, pega todos os links, para cada link
+        //gera um evento na tag conteudo
+        //o evento gera uma resposta ajax e armazena ela em texto
+        //e em seguida adiciona na tag conteudo da página. 
+        document.querySelectorAll('a').forEach(link => {
+            const conteudo = document.getElementById('conteudo')
+            link.onclick = function(e) {               
+                e.preventDefault()
+                
+                fetch(link.href)
+                    .then(resp => resp.text())
+                    .then(html => conteudo.innerHTML = html)
+            }
+
+        })
+    </script>
+</body>
+</html>

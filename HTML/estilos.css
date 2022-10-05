@@ -1,0 +1,20 @@
+.titulo {
+    font-size: large;
+    font-weight: bold;
+    font-family: sans-serif;
+    padding-left: 0px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: firebrick;
+}
+
+.navegacao {
+    font-style: italic;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.rodape {
+    font-family:sans-serif;
+    padding-top: 20px;
+}
